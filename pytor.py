@@ -22,6 +22,10 @@ def make_simple_3Dplot( data2plot, xVals, yVals, zVals, N_contLevels=8, fname_pl
 
     mlab.show()
 
+data.set(:
+    data.loop{
+    #the current sets are not in order to define a curent remaped status to generate the the virtual 3d model of any datasets.
+
 # define original coordinates
 x_min, y_min, z_min = 0, 0, 0
 x_max, y_max, z_max = 10, 10, 10
