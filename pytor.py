@@ -18,6 +18,7 @@ def make_simple_3Dplot( data2plot, xVals, yVals, zVals, N_contLevels=8, fname_pl
     mlab.xlabel('x')
     mlab.ylabel('y')
     mlab.zlabel('z')
+    mlab.zlabel('data')
 
     mlab.show()
 
