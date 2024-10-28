@@ -6,9 +6,12 @@ import numpy as np
 
 app = Flask(__name__)
 
-# Foodvisor API setup
+
 FOODVISOR_API_URL = "https://vision.foodvisor.io/api/1.0/en/analysis/"
-HEADERS = {"Authorization": "Api-Key CfYIA6TX.wTXi765jr1RLDG9CKZV5blIrrjTfaKut"}  # Replace with your API Key
+HEADERS = {"Authorization": "Api-Key CfYIA6TX.wTXi765jr1RLDG9CKZV5blIrrjTfaKut"}  
+
+
+
 
 @app.route('/')
 def index():
@@ -26,7 +29,7 @@ def analyze():
 
     # Decode base64 data
     try:
-        image_data = base64.b64decode(data.split(",")[1])  # Skip 'data:image/jpeg;base64,'
+        image_data = base64.b64decode(data.split(",")[1]) 
         image = np.frombuffer(image_data, np.uint8)
         frame = cv2.imdecode(image, cv2.IMREAD_COLOR)
     except Exception as e:
