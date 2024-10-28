@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.camera {
+    margin: 20px;
+    position: relative;
+}
+
+#video {
+    border: 2px solid #333;
+    width: 320px;
+    height: 240px;
+}
+
+#capture {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#result {
+    margin-top: 20px;
+    font-family: monospace;
+}
