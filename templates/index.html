@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Camera Capture</title>
+    <title>Image Analysis</title>
 </head>
 <body>
-    <h1>Camera Capture and Analyze</h1>
-    <video id="video" autoplay></video>
-    <button id="capture">Capture</button>
-    <pre id="jsonResult"></pre>
+    <h1>Upload an Image for Analysis</h1>
+    <form action="/analyze" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Analyze</button>
+    </form>
 
-    <script src="/static/js/scripts.js"></script>
+    <h2>Analysis Result:</h2>
+    <pre id="jsonResult">{{ result }}</pre>
 </body>
 </html>
