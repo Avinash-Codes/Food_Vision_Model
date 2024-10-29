@@ -45,9 +45,15 @@ def analyze():
     
     if response.status_code == 200:
         return jsonify(response.json())
+
+        
     else:
         print(f"Foodvisor API error: {response.text}")
         return jsonify({"error": response.text}), response.status_code
+    
+
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
