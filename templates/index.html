@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Upload Food Image</title>
 </head>
 <body>
@@ -11,5 +12,18 @@
         <input type="file" name="image" accept="image/*" required>
         <button type="submit">Upload and Analyze</button>
     </form>
+=======
+    <title>Image Analysis</title>
+</head>
+<body>
+    <h1>Upload an Image for Analysis</h1>
+    <form action="/analyze" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Analyze</button>
+    </form>
+
+    <h2>Analysis Result:</h2>
+    <pre id="jsonResult">{{ result }}</pre>
+>>>>>>> 2e670c93d3a50f7e1fa169675a0bfc210d3d99c1
 </body>
 </html>
