@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Camera Capture</title>
+    <title>Upload Food Image</title>
 </head>
 <body>
-    <h1>Camera Capture and Analyze</h1>
-    <video id="video" autoplay></video>
-    <button id="capture">Capture</button>
-    <pre id="jsonResult"></pre>
-
-    <script src="/static/js/scripts.js"></script>
+    <h1>Upload an Image of Food</h1>
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Upload and Analyze</button>
+    </form>
 </body>
 </html>

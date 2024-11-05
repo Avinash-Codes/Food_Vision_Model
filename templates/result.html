@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Nutrients</title>
+</head>
+<body>
+    <h1>Top 5 Nutrient Predictions</h1>
+    <ul>
+        {% for item in predictions %}
+            <li><strong>{{ item.name }}</strong> - 
+                Calories: {{ item.calories }}, 
+                Carbs: {{ item.carbs }}g, 
+                Protein: {{ item.protein }}g 
+                (Probability: {{ item.probability }})
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/">Upload Another Image</a>
+</body>
+</html>

@@ -41,10 +41,14 @@ def analyze():
     response = requests.post(FOODVISOR_API_URL, headers=HEADERS, files=files)
     
     if response.status_code == 200:
-        return jsonify(response.json())
+        response_data = response.json()
+        # Extract specific data you need to display
+        analysis_results = response_data.get("results", [])
+        return render_template('results.html', results=analysis_results)
+  
     else:
         print(f"Foodvisor API error: {response.text}")
-        return jsonify({"error": response.text}), response.status_code
+       return jsonify({"error": response.text}), response.status_code
 
 if __name__ == '__main__':
     app.run(debug=True)
